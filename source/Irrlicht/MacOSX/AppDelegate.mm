@@ -65,7 +65,7 @@
 	NSRect		frame;
 
 	window = [aNotification object];
-	frame = [window frame];
+	frame = [window contentRectForFrameRect:[window frame]];
 	_device->setResize((int)frame.size.width,(int)frame.size.height);
 }
 
