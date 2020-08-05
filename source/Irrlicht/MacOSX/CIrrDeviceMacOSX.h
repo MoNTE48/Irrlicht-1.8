@@ -107,9 +107,15 @@ namespace irr
 		public:
 
 			CCursorControl(const core::dimension2d<u32>& wsize, CIrrDeviceMacOSX *device)
-				: WindowSize(wsize), IsVisible(true), InvWindowSize(0.0f, 0.0f), Device(device), UseReferenceRect(false)
+				: IsVisible(true), InvWindowSize(0.0f, 0.0f), Device(device), UseReferenceRect(false)
 			{
+				updateWindowSize(wsize);
 				CursorPos.X = CursorPos.Y = 0;
+			}
+
+			void updateWindowSize(const core::dimension2du& size)
+			{
+				WindowSize = size;
 				if (WindowSize.Width!=0)
 					InvWindowSize.Width = 1.0f / WindowSize.Width;
 				if (WindowSize.Height!=0)
@@ -241,6 +247,7 @@ namespace irr
 		bool IsShiftDown;
 		bool IsControlDown;
 		bool IsResizable;
+		CGFloat NativeScale;
 	};
 
 
@@ -248,4 +255,3 @@ namespace irr
 
 #endif // _IRR_COMPILE_WITH_OSX_DEVICE_
 #endif // __C_IRR_DEVICE_MACOSX_H_INCLUDED__
-
