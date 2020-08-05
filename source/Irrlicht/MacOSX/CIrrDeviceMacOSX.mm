@@ -907,6 +907,9 @@ void CIrrDeviceMacOSX::setResize(int width, int height)
 
 	if (CreationParams.WindowId && OGLContext)
 		[(NSOpenGLContext *)OGLContext update];
+
+	// reset mouse state on window resize
+	MouseButtonStates = NO;
 }
 
 
