@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -1835,7 +1835,7 @@
 		4C53E14C0A484C2C0014E966 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C53E14D0A484C2C0014E966 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		4C53E15E0A484C2C0014E966 /* CIrrDeviceMacOSX.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CIrrDeviceMacOSX.h; sourceTree = "<group>"; };
-		4C53E15F0A484C2C0014E966 /* CIrrDeviceMacOSX.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = CIrrDeviceMacOSX.mm; sourceTree = "<group>"; };
+		4C53E15F0A484C2C0014E966 /* CIrrDeviceMacOSX.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = CIrrDeviceMacOSX.mm; sourceTree = "<group>"; usesTabs = 1; };
 		4C53E1640A484C2C0014E966 /* MacOSX_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MacOSX_Prefix.pch; sourceTree = "<group>"; };
 		4C53E1650A484C2C0014E966 /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MainMenu.nib; sourceTree = "<group>"; };
 		4C53E1660A484C2C0014E966 /* OSXClipboard.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OSXClipboard.h; sourceTree = "<group>"; };
@@ -4382,7 +4382,7 @@
 			attributes = {
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "MacOSX" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
