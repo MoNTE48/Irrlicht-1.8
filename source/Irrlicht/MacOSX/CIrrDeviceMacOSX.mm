@@ -628,8 +628,9 @@ bool CIrrDeviceMacOSX::createWindow()
 			if(!CreationParams.WindowId) //create another window when WindowId is null
 			{
 				NSBackingStoreType type = (CreationParams.DriverType == video::EDT_OPENGL) ? NSBackingStoreBuffered : NSBackingStoreNonretained;
+				NSWindowStyleMask style = NSTitledWindowMask+NSClosableWindowMask+NSResizableWindowMask+NSMiniaturizableWindowMask;
 
-				Window = [[NSWindow alloc] initWithContentRect:NSMakeRect(0,0,CreationParams.WindowSize.Width,CreationParams.WindowSize.Height) styleMask:NSTitledWindowMask+NSClosableWindowMask+NSResizableWindowMask backing:type defer:FALSE];
+				Window = [[NSWindow alloc] initWithContentRect:NSMakeRect(0,0,CreationParams.WindowSize.Width,CreationParams.WindowSize.Height) styleMask:style backing:type defer:FALSE];
 				NSView* view = [Window contentView];
 				if ([view respondsToSelector:@selector(setWantsBestResolutionOpenGLSurface:)])
 					[view setWantsBestResolutionOpenGLSurface:YES];
