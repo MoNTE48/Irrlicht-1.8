@@ -939,6 +939,12 @@ void CIrrDeviceMacOSX::setResize(int width, int height)
 	if (CreationParams.WindowId && OGLContext)
 		[(NSOpenGLContext *)OGLContext update];
 
+	// update device size to be ready to change screen resolution
+	CGRect displayRect = CGDisplayBounds(CGMainDisplayID());
+
+	ScreenWidth = (int) (displayRect.size.width * NativeScale);
+	ScreenHeight = (int) (displayRect.size.height * NativeScale);
+
 	// reset mouse state on window resize
 	MouseButtonStates = NO;
 }
