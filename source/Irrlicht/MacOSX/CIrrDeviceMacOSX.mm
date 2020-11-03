@@ -644,9 +644,13 @@ bool CIrrDeviceMacOSX::createWindow()
 				if (x % 2 != 0) x += 1;
 				if (y % 2 != 0) y += 1;
 
+				// get title height
+				CGFloat contentHeight = [Window contentRectForFrameRect: Window.frame].size.height;
+				CGFloat titlebarHeight = frame.size.height - contentHeight;
+
 				frame.size.width = x / NativeScale;
-				frame.size.height = y / NativeScale;
-				[Window setFrame: frame display:YES];
+				frame.size.height = y / NativeScale + titlebarHeight;
+				[Window setFrame:frame display:YES animate:YES];
 			}
 
 			if (Window != NULL || CreationParams.WindowId)
